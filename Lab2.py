@@ -6,5 +6,6 @@
 import struct
 
 def convertFloatingPoint(FP_num):
+    //for the sign bit
     sign = 0 if FP_num >=0 else 1
     FP_num = abs(FP_num)
