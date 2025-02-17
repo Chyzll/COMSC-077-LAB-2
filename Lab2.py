@@ -33,11 +33,8 @@ for _ in range(8):
 
 
  #convert to binary 
-exponent_bin = format(exponent_with_bias,)  # Convert exponent to 5-bit binary
-mantissa = ''.join(map(str, mantissa_bits))  # Convert the mantissa list to a string of bits
-
-    # Return the simplified floating-point representation
-return x"{sign} | {exponent_bin} | {mantissa_bin}"
+exponent_bin = format(exponent_with_bias,)  # exponent 5 bit
+mantissa = ''.join(map(str, mantissa_bits))  # mantissa bits
 
 
 
