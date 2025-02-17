@@ -6,7 +6,7 @@
 
 def convertFloatingPoint(f):
     #for the sign bit
-    sign = 0 if x >=0 else 1
+    sign = 0 if f >=0 else 1
     f = abs(f)
 
 
