@@ -32,16 +32,16 @@ def convertFloatingPoin(FP_num):
         mantissa_bits.append(bit)
         significand -= bit
 
-     #Convert exponent and mantissa to binary
+     #convert exponent and mantissa to binary
     exponent_binary = format(exponent_with_bias,'05b')  # Convert exponent to 5-bit binary
 
     mantissa_binary = ''.join(map(str, mantissa_bits))  # convert mantissa to binary
 
-    # Return the simplified floating-point representation
+    # return the simplified floating-point representation
     return f'{sign} | {exponent_binary} | {mantissa_binary}'
 
 
-# Examples 
+# examples 
 num1 = 3.14
 num2 = -7.16
 
