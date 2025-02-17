@@ -33,9 +33,9 @@ def convertFloatingPoin(FP_num):
         significand -= bit
 
      #convert exponent and mantissa to binary
-    exponent_binary = format(exponent_with_bias,'05b')  # Convert exponent to 5-bit binary
+    exponent_binary = format(exponent_with_bias,'05b')  # ensure exponent is 5 bits
 
-    mantissa_binary = ''.join(map(str, mantissa_bits))  # convert mantissa to binary
+    mantissa_binary = ''.join(map(str, mantissa_bits))   
 
     # return the simplified floating-point representation
     return f'{sign} | {exponent_binary} | {mantissa_binary}'
