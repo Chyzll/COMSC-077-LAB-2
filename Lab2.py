@@ -32,7 +32,7 @@ def convertFloatingPoin(FP_num):
         mantissa_bits.append(bit)
         significand -= bit
 
-    # Step 5: Convert exponent and mantissa to binary
+     #Convert exponent and mantissa to binary
     exponent_binary = format(exponent_with_bias,'05b')  # Convert exponent to 5-bit binary
 
     mantissa_binary = ''.join(map(str, mantissa_bits))  # convert mantissa to binary
