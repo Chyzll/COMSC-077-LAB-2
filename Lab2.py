@@ -4,26 +4,26 @@
 # This program aims to converts a floating-point number to its simplified floating-point representation or the IEEE 754 format discussed in the slides.
 
 
-def convertFloatingPoint(f):
+def convertFloatingPoint(FP_num):
     #for the sign bit
-    sign = 0 if f >=0 else 1
-    f = abs(f)
+    sign = 0 if FP_num >=0 else 1
+    FP_num = abs(FP_num)
 
 
-#normalization
+#normallization
 exponent = 0
-while f >= 2.0:
-        f /= 2.0
+while FP_num >= 2.0:
+        FP_num /= 2.0
         exponent += 1
-while f < 1.0:
-        f *= 2.0
+while FP_num < 1.0:
+        FP_num *= 2.0
         exponent -= 1
 
 #With bias 15
-exponent_with_bias = exponent + 15 
+exponent_with_bias = exponent + 15
 
  # The 8 bits (The significand/mantissa)
-significand = f - 1  #removes the 1
+significand = FP_num - 1  #removes the 1
 mantissa_bits = []
 for _ in range(8):
         significand *= 2
@@ -32,9 +32,12 @@ for _ in range(8):
         significand -= bit
 
 
- #convert to binary 
-exponent_bin = format(exponent_with_bias,)  # exponent 5 bit
-mantissa = ''.join(map(str, mantissa_bits))  # mantissa bits
+ #convert to binary
+exponent_bin = format(exponent_with_bias,)  # Convert exponent to 5-bit binary
+mantissa_bits = ''.join(map(str, mantissa_bits))  # Convert the mantissa list to a string of bits
+
+
+
 
 
 
