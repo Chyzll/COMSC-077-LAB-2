@@ -10,7 +10,7 @@ def convertFloatingPoint(FP_num):
     FP_num = abs(FP_num)
 
 
-#normallization
+#normalization
 exponent = 0
 while FP_num >= 2.0:
         FP_num /= 2.0
